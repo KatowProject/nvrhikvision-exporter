@@ -1,0 +1,28 @@
+# Build artifacts
+/dist/
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Go files
+*.go.out
+*.test
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Dependencies
+vendor/
+
+# Binary
+/bin/
+
+# Temporary files
+*.tmp
+*.bak

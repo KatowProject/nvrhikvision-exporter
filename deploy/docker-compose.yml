@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  nvrhikvision-exporter:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    ports:
+      - "9102:9102"
+    volumes:
+      - ../config.yaml:/root/config.yaml
+    command: ["-config=config.yaml"]
+    restart: unless-stopped
+    networks:
+      - monitoring
+
+networks:
+  monitoring:
+    driver: bridge
